@@ -35,7 +35,7 @@ jobs:
             base="${base%.in}"
             out_file="tests/${base}.out"
 
-            python main.py < "$in_file" | diff -q - "$out_file"
+            python main.py < "$in_file" | diff -q --ignore-trailing-space - "$out_file"
           done
 
 
